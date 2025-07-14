@@ -1,11 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thai-Austrain</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 </head>
+<style>
+    .navbar-nav>.border-start {
+        height: 28px;
+        align-self: center;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #444 !important;
+        color: #5fa2e4 !important;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #444 !important;
+        color: #5fa2e4 !important;
+        /* ใช้ !important เพื่อให้ CSS นี้มีความสำคัญกว่าค่า default ของ Bootstrap */
+    }
+
+    .nav-tabs {
+        display: flex;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border-bottom: none;
+    }
+
+    .nav-tabs .nav-item {
+        padding: 5px 70px;
+        text-align: center;
+    }
+
+    .nav-tabs .nav-link {
+        color: black;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        padding: 12px 0;
+        transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #336699;
+        border-bottom: 3px solid #0d6efd;
+        background-color: transparent;
+    }
+
+    .nav-tabs .nav-link i {
+        margin-right: 6px;
+    }
+</style>
+
 <body>
-    
+
+    <!-- ส่วนหัว -->
+    <header style="background-color: #336699">
+        <div class="container p-3">
+            <div class="d-flex align-item-center">
+                <img src="img/logotatc.gif" width="115">
+                <div class="p-3" style="color: aliceblue;">
+                    <p class="fs-4 mb-1">วิทยาลัยเทคนิคสัตหีบ</p>
+                    <p class="fs-6 mb-0">Thai-Austrian Technical College </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- แท็บเมนู -->
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: #3D3D3D">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex flex-row text-center w-100 gap-0 mb-2 mb-lg-0 text-white"
+                    style="max-width: 1200px;">
+                    <li class="nav-item flex-fill px-2">
+                        <a class="nav-link active" aria-current="page" href="#">หน้าแรก</a>
+                    </li>
+                    <li class="border-start border-LightGray border-2"></li>
+                    <li class="nav-item dropdown flex-fill px-2">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            เกี่ยวกับ tatc
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">ประวัติ</a></li>
+                            <li><a class="dropdown-item" href="#">สัญลักษณ์</a></li>
+                            <li><a class="dropdown-item" href="#">วิสัยทัศน์ / พันธกิจ / สมรรถนะหลัก /
+                                    และค่านิยมร่วม</a></li>
+                            <li><a class="dropdown-item" href="#">โครงสร้างองค์กร</a></li>
+                            <li><a class="dropdown-item" href="#">วิทยาเขต</a></li>
+                            <li><a class="dropdown-item" href="#">คณะผู้บริหาร</a></li>
+                            <li><a class="dropdown-item" href="#">นโยบายวิทยาลัย</a></li>
+                            <li><a class="dropdown-item" href="#">รายงานประจำปี</a></li>
+                            <li><a class="dropdown-item" href="#">องค์กรโปร่งใส</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-start border-LightGray border-2"></li>
+                    <li class="nav-item dropdown flex-fill px-2">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            คณะและหน่วยงาน
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">หน่วยงานการศึกษา</a></li>
+                            <li><a class="dropdown-item" href="#">ฝ่ายบริหารทรัพยากร</a></li>
+                            <li><a class="dropdown-item" href="#">ฝ่ายวิชาการ</a></li>
+                            <li><a class="dropdown-item" href="#">ฝ่ายแผนงานและความร่วมมือ</a></li>
+                            <li><a class="dropdown-item" href="#">ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</a></li>
+                            <li><a class="dropdown-item" href="#">ITA/ข้อมูลสาธารณะ</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-start border-LightGray border-2"></li>
+                    <li class="nav-item dropdown flex-fill px-2">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            รับสมัครนักศึกษา
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">ม.3/ม.6</a></li>
+                            <li><a class="dropdown-item" href="#">ปวช.</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-start border-LightGray border-2"></li>
+                    <li class="nav-item dropdown flex-fill px-2">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            วิจัยและบริการวิชาการ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">ผลงานวิจัยเด่น</a></li>
+                            <li><a class="dropdown-item" href="#">ฐานข้อมูลนักวิจัย</a></li>
+                            <li><a class="dropdown-item" href="#">วารสารวิชาการ</a></li>
+                            <li><a class="dropdown-item" href="#">งานบริการวิชาการ</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-start border-LightGray border-2"></li>
+                    <li class="nav-item flex-fill px-4">
+                        <a href="" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            ติดต่อ
+                        </a>
+                    <li class="border-start border-LightGray border-2"></li>
+                    <li class="nav-item dropdown flex-fill px-2">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ชีวิตในรั้ววิทยาลัย
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">มจพ.กรุงเทพ</a></li>
+                            <li><a class="dropdown-item" href="#">มจพ.วิทยาเขตปราจีนบุรี</a></li>
+                            <li><a class="dropdown-item" href="#">มจพ.วิทยาเขตระยอง</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- slide -->
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="750">
+                <img src="img/1.jpg" class="d-block w-60" alt="..." />
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+                <img src="img/6.jpg" class="d-block w-60" alt="..." />
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+                <img src="img/3.jpg" class="d-block w-60" alt="..." />
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+                <img src="img/4.jpg" class="d-block w-60" alt="..." />
+            </div>
+            <div class="carousel-item" data-bs-interval="750">
+                <img src="img/5.jpg" class="d-block w-60" alt="..." />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- nav tab -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                    class="fas fa-university"></i>ข่าววิทยาลัย</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                    class="fas fa-book-open"></i>ข่าวทุนวิจัย/อบรม</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><i
+                    class="fas fa-user"></i>ข่าวนักศึกษา</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><i
+                    class="fas fa-book-open"></i>ข่าวรับสมัครนักศึกษา</button>
+        </li>
+    </ul>
+    <!-- card news -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div class="row row-cols-1 row-cols-md-4 g-4 p-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/news-1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ผ่อนผันการเกณฑ์ทหาร</h5>
+                            <p class="card-text">ขั้นตอนการยื่นคำขอผ่อนผันการเช้ารับเกณฑ์ทหาร ขั้นตอนที่1</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">25/06/2568</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/news-2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">การลงบัญชี</h5>
+                            <p class="card-text">การลงบัญชีทหารกองเกิน หลักเกณฑ์การลงบัญชีทหารกองเกิน (ใบสำคัญ แบบ สด.9)
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">28/05/2568</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/news-3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">พิธีไหว้ครู</h5>
+                            <p class="card-text">มอบทุนการศึกษา และใบเกียรติคุณบัตร เพื่อแสดงความชื่นชม
+                                นักเรียน-นักศึกษาที่มีจิตอาสาช่วยเหลือผู้อื่น</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">12/06/2568</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/news-4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">บริจาคโลหิต</h5>
+                            <p class="card-text">โครงการบริจาคโลหิต เพื่อถวายเป็นพระราชกุศล
+                                เฉลิมพระเกียรติเนื่องในโอกาสวันเฉลิมพระชนมพรรษา
+                                พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ พระวชิรเกล้าเจ้าอยู่หัว 28 กรกฎาคม
+                                2568</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">09/07/2568</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade p-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            ...
+        </div>
+        <div class="tab-pane fade p-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            ...
+        </div>
+        <div class="tab-pane fade p-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="stu-tab" tabindex="0">...
+        </div>
+    </div>
+
+
+    <!-- ส่วนท้ายข้อมูลติดต่อ -->
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-warning">อื่นๆ</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">สมัครงาน</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">จัดซื้อจัดจ้าง</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">แผนที่</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">ถาม-ตอบ (Q&A)</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">ติดต่อสอบถาม/เสนอแนะ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">ร้องเรียนทุจริตและประพฤติมิชอบ</a></li>
+                        <li><a href="#"
+                                class="text-light text-decoration-none">ศูนย์ข้อมูลข่าวสารอิเล็กทรอนิกส์ของราชการวิทยาลัยเทคนิคสัตหีบ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 2: ข้อมูลติดต่อ -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-warning">ติดต่อ วิทยาลัยเทคนิคสัตหีบ</h5>
+                    <p>
+                        กม.160 193 หมู่ 3 ต.นาจอมเทียน
+                        อ.สัตหีบ จ.ชลบุรี 20250
+                    </p>
+                    <p><i class="bi bi-telephone-fill"></i> โทรศัพท์ : 038-238398,038-238527</p>
+                    <p><i class="bi bi-printer-fill"></i> โทรสาร : 038-237268</p>
+                    <p><i class="bi bi-envelope-fill"></i> อีเมล : saraban@tatc.ac.th</p>
+                </div>
+
+                <!-- Section 3: Social media & Logo -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-warning">ติดตามเราได้ที่</h5>
+                    <div class="mb-2">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-youtube fs-4"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-tiktok fs-4"></i></a>
+                    </div>
+                    <img src="img/logotatc.gif" alt="tatc" class="img-fluid"
+                        style="max-width: 125px;">
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center mt-4 border-top pt-3">
+                Develop and design by Supisara Sanjiem
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <!-- <a href="#" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle">
+            <i class="bi bi-arrow-up text-white"></i>
+        </a> -->
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
+
 </html>
